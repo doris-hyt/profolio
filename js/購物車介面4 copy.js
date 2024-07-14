@@ -11,20 +11,14 @@ let btn = document.querySelector('.btn');
 let method1 = [];
 let method2 = [];
 let deliver_fee = 0
-
-
-// console.log(localStorage.getItem('key'))
 if (JSON.parse(localStorage.getItem('key'))) {
   array_product01 = JSON.parse(localStorage.getItem('key'))
-  console.log(array_product01)
 }
 if (JSON.parse(localStorage.getItem('key01'))) {
   object = JSON.parse(localStorage.getItem('key01'))
-  console.log(object)
 }
 object.address.forEach((item)=>{
   address_form += item;
-  console.log(address_form)
 })
 if (JSON.parse(localStorage.getItem('key02'))) {
   method1 = JSON.parse(localStorage.getItem('key02'));
@@ -32,9 +26,7 @@ if (JSON.parse(localStorage.getItem('key02'))) {
   deliver_fee = parseInt(method2[1]);
 }
 
-
 displayorder()
-
 
 btn.addEventListener('click', function () {
   

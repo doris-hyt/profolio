@@ -10,22 +10,11 @@ let btn = document.querySelector('.btn01');
 let address_form = [];
 let method2=[]
 
-
-
-console.log(btn)
-
-// console.log(address)
-
-
-// console.log(localStorage.getItem('key'))
-
 if (JSON.parse(localStorage.getItem('key'))) {
   array_product01 = JSON.parse(localStorage.getItem('key'))
-  console.log(array_product01)
 }
 if (JSON.parse(localStorage.getItem('key01'))) {
   object = JSON.parse(localStorage.getItem('key01'))
-  // console.log(object)
   address_form = object.address
   order03.innerHTML = ''
   order03.innerHTML = `<div class="mb-3">
@@ -59,7 +48,6 @@ if (JSON.parse(localStorage.getItem('key01'))) {
 if (JSON.parse(localStorage.getItem('key03'))) {
   method2 = JSON.parse(localStorage.getItem('key03'))
   deliver_fee = parseInt(method2[1])
-  console.log(method2)
 }
 
 displayorder()
@@ -117,27 +105,19 @@ function displayorder() {
   })
 }
 btn.addEventListener(('click'), function () {
-  console.log('有點到')
   let Name = document.querySelector('#name');
   let Phone = document.querySelector('#phone');
   let Email = document.querySelector('#email');
   let address = document.querySelectorAll('#address');
   address_form = []
-  console.log(address)
   object.name = `${Name.value}`;
   object.phone = `${Phone.value}`;
   object.email = `${Email.value}`;
   address.forEach((item) => {
-    console.log(item.value)
     address_form.push(item.value)
-    console.log(address_form)
   })
-  object.address = address_form
-  console.log(object)
+  object.address = address_form;
   localStorage.setItem('key01', JSON.stringify(object));
-  window.location.href = './購物車結帳畫面 copy.html'
+  window.location.href = './購物車結帳畫面.html'
 })
-
-// value = "${object.address[2]}"
-
 

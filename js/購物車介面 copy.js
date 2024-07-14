@@ -5,17 +5,11 @@ let element = document.querySelector('.plus');
 let sum_quantity = 0
 let sum_price = 0
 let total = 0
-
-
-
-// console.log(localStorage.getItem('key'))
 if (JSON.parse(localStorage.getItem('key'))) {
   array_product02 = JSON.parse(localStorage.getItem('key'))
-  console.log(array_product02)
 }
 
 displayorder()
-//先渲染介面
 
 function displayorder() {
   array_product02.forEach((item) => {
@@ -94,90 +88,49 @@ function displayorder() {
   })
 }
 let numbers = document.querySelectorAll('.quantity');
-//先取得數量欄位的input值
 let btn = document.querySelector('.btn')
-//綁定下一步按鈕
 order.addEventListener('click', function (event) {
-  element = event.target;//先辨別點擊元素;
-  console.log(element.parentElement.dataset.id);
-  console.log(element);
-  console.log(event.target.dataset);
-  let ID = element.dataset.id;//抓取點擊元素的data-id
-  console.log(ID);
-  //找有對應點擊元素ID的物件(ID屬性的值)在購買清單的索引值
+  element = event.target;
+  let ID = element.dataset.id;
   let index = array_product02.findIndex((item) => item.ID === ID);
-  console.log(index);
-  //先取得陣列中指定物件商品總額的值
   let cost = array_product02[index].total;
-  // numbers = document.querySelectorAll('.quantity')
   adjustquantity();
-  //當點擊到加減按鈕時，要先把有重新輸入數量的商品(因只有輸入還未觸發改成正確的數量)數量調整跟抓到的資料一致，再去做加減的動作
   let number = numbers[index].value;
-  //先取得陣列中指定物件商品數量的值
   let per_price = array_product02[index].price;
-  //先取得陣列中指定物件商品價格的值
   sum_quantity = 0;
   sum_price = 0;
   total = 0;
-  //每次點擊按鈕要總和重置，才不會一直累加
-  //判斷點擊按鈕為增加數量還是減少數量
   if (element.classList.contains('plus')) {
-    console.log('有點到');
-    console.log(element);
-    //改變數量及金額   
     number++;
     cost = per_price * number
-    //重新賦值重複元素數量屬性的值
     array_product02[index].quantity = number;
-    array_product02[index].total = cost
-    console.log(array_product02[index].quantity);
-    console.log(array_product02[index].price);
-    order.innerHTML = ''
-    console.log(number)
+    array_product02[index].total = cost;
+    order.innerHTML = '';
 
   } else if (element.classList.contains('delete')) {
-    console.log('有點到')
     number--;
     if (number == 0) {
       array_product02.splice(index, 1)
-      console.log(array_product02)
       order.innerHTML = '';
-      //如果購物車中只剩下一項產品，要連同金額合計欄清空，不然需要重新整理才會清空
       order01.innerHTML = '';
       alert('數量為零,已刪除產品，如有需要，請重新添加到購物車中')
     } else {
       cost = per_price * number
-      //重新賦值重複元素數量屬性的值
       array_product02[index].quantity = number;
-      array_product02[index].total = cost
-      console.log(array_product02[index].quantity);
-      console.log(array_product02[index].price);
-      order.innerHTML = ''
-      console.log(element)
+      array_product02[index].total = cost;
+      order.innerHTML = '';
     }
   }
   displayorder()
-  console.log(array_product02)
-  //不先存進去一次，重新整理會回復到原本的陣列
   localStorage.setItem('key', JSON.stringify(array_product02))
-  // localStorage.setItem('price', JSON.stringify(array_product02))
 })
 
 btn.addEventListener('click', function () {
-  // numbers = document.querySelectorAll('.quantity')
-  //將存進暫存空間的陣列值再重新轉化成陣列
-  // array_product02 = JSON.parse(localStorage.getItem('key'))
-  console.log('有點到');
   adjustquantity();
-  // array_product02.map((item, index) => item.quantity = numbers[index].value)
-  // array_product02.map((item, index) => item.total = numbers[index].value * item.price)
-  console.log(array_product02);
   localStorage.setItem('key', JSON.stringify(array_product02));
 })
 function adjustquantity(){
-  //每次點擊按鈕重新讀取數量欄位的input值
   numbers = document.querySelectorAll('.quantity');
-  //將購買清單裡面數量屬性的值調整到跟數量欄位裡面的input.value一致
   array_product02.map((item, index) => item.quantity = numbers[index].value);
   array_product02.map((item, index) => item.total = numbers[index].value * item.price);
 }

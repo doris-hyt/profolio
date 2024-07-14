@@ -10,55 +10,35 @@ let option2s = document.querySelectorAll('.option02');
 let payment='';
 let deliver='';
 let deliver_fee=0;
-console.log(options);
-console.log(option2s)
-
-
-// console.log(localStorage.getItem('key'))
 if (JSON.parse(localStorage.getItem('key'))) {
   array_product01 = JSON.parse(localStorage.getItem('key'))
-  console.log(array_product01)
 }
-//當進入下一頁返回前一頁要改變運送及付款方式，先清空原本的資料
 if (JSON.parse(localStorage.getItem('key02'))) {
   method1 = JSON.parse(localStorage.getItem('key02'))
   method2 = JSON.parse(localStorage.getItem('key03'))
-  console.log(method1, method2)
   deliver_fee = parseInt(method2[1])
   method1 = [];
   method2 = []
 }
-console.log(method1, method2)
 
 options.forEach((item01)=>{
   item01.addEventListener(('click'),function(){
-    console.log(item01.lastElementChild.innerText);
     payment = item01.lastElementChild.innerText;
-    console.log(payment);
     method1 = []
     method1.push(payment);
-    console.log(method1);
     localStorage.setItem('key02', JSON.stringify(method1));
     
   })
 })
 option2s.forEach((item02) => {
   item02.addEventListener(('click'), function () {
-    console.log(item02.lastElementChild.innerText);
     deliver = item02.lastElementChild.innerText;
     deliver_fee = parseInt(item02.lastElementChild.dataset.price)
-    console.log(deliver, deliver_fee)
-    console.log(typeof (deliver_fee))
     method2 = []
     method2.push(deliver, deliver_fee)
-    console.log(method2)
     localStorage.setItem('key03', JSON.stringify(method2));
   })
 })
-
-
-
-
 
 displayorder()
 
