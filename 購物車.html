@@ -1,0 +1,333 @@
+<!-- 老師作法 -->
+<!-- 1.可以將每一顆按鈕抓取出來形成一個陣列
+2.並在每一顆按鈕運用foreach綁上監聽事件
+3.並得到點擊到的按鈕的索引值
+4.再將對應索引值的商品清單加入到購買清單中
+5.
+6.進入下一頁交
+7.過濾要顯示的產品(判斷索引值有沒有在點擊的陣列裡面)=>forEach+ IF判斷式 -->
+<script>
+  let shop = [
+    {
+      id: '1',
+      name: '山梨縣',
+      describe: '偉岸的富士山位在靜岡縣與山梨縣交界，山梨縣位在內陸，境內的高山、湖泊地景更加豐富，與靜岡縣風貌又不相同。人氣景點「 富士五湖」座落於富士山北面，其中的「 河口湖」最受歡迎，觀光景區最多，湖畔附近也有美術館、纜車等，春秋時節可以看到沿岸的櫻花或楓葉，鍾情湖光三色、愛好戶外活動的旅客，不妨走進山梨縣體驗看看！',
+      img: './img/001.jpg',
+      price: '10000',
+    },
+    {
+      id: '2',
+      name: '沖繩縣',
+      describe: '離台灣最近的日本城市沖繩縣，有著自然風光、海景、沙灘，宜人溫暖的氣候，讓人願意頻頻造訪。沖繩縣還保留豐富的琉球文化，首都「 那霸市」中有許多歷史遺跡，例如首里城、識名園。沖繩除了觀光、享受美景，也是人氣購物聖地，有 8 大購物中心、美國村，根本就是愛買族的天堂！',
+      img: './img/002.jpg',
+      price: '20000',
+    },
+    {
+      id: '3',
+      name: '千葉縣',
+      describe: '你知道「 東京迪士尼 」並不在東京嗎？日本必去景點「 東京迪士尼度假區」實際上在千葉縣！踏入後彷彿進入夢幻國度，不論大人還是小孩都能玩得十分盡興，鄰近東京都的千葉縣，除了迪士尼還有「 鴨川海洋世界 」、「 母親牧場」，與各類可愛動物親近、餵食，母親牧場一年四季都鮮花盛開，美景令人神往。',
+      img: './img/003.jpg',
+      price: '10000',
+    },
+    {
+      id: '4',
+      name: '愛知縣',
+      describe: '位在日本本州正中央的愛知縣，離東京、大阪、京都都很近，知名景點「 名古屋城 」是日本三大名城之一，屋簷上有閃亮亮的金鯱裝飾，又叫做「 金城」、「 金鯱城 」。名古屋市還有日本三大神社「 熱田神宮」，擁有許多信眾前去求好運、姻緣，這兩處古蹟景點都是去名古屋必去的景點，「園區很大好逛，熱衷日本史的朋友可能要花一整天才逛得完。歷史古蹟、整體園區都維護得很棒，最讓我感到讚嘆的是樹木花草都修剪地很整齊，卻不制式，是讓人舒服賞心悅目那種。」',
+      img: './img/004.jpg',
+      price: '5000',
+    },
+    {
+      id: '5',
+      name: '京都府',
+      describe: '有日本古都之稱的「 京都府」，吸引眾多來自國外各地的遊客，沉浸這個充滿古色古香的城鎮。世界遺產「清水寺」更是一定要造訪的景點之一，非常適合慢步、靜心觀賞寺院建築，拜訪完順道前往「 地主神社」，據說戀愛占卜非常靈驗！「 八坂神社 」也被京都人暱稱「 祇園 」，每到 7 月還會登場「 祇園祭 」，有超過千年的歷史，八坂神社周邊的人氣景點還有「 花見小路」，可以看見藝伎、舞技們穿梭街上，是京都非常獨特的人文風景。',
+      img: './img/005.jpg',
+      price: '30000',
+    },
+    {
+      id: '6',
+      name: '神奈川縣',
+      describe: '緊鄰東京都的神奈川縣，境內有日本鎌倉幕府古都，鎌倉筆直瑰麗的海岸線，成為關東地區夏季海邊度假首選，也是《灌籃高手》的經典場景，許多人會專門前往搭乘路上電車「 江之電 」，在「鎌倉高校前站 」下車，走到平交道一覽整片夢幻海灘。日本知名城市「 橫濱市 」、「 箱根町 」也位在神奈川縣，橫濱纜車、橫濱中華街、元町商店街、箱根神社，都是必逛景點。',
+      img: './img/006.jpg',
+      price: '15000',
+    },
+    {
+      id: '7',
+      name: '大阪府',
+      describe: '大阪府熱門景點「 大阪環球影城 」集合全球人氣電影主體，哈利波特、瑪利歐、侏羅紀公園、小小兵等，被不少人列為必去景點。大阪府知名景點「 心齋橋」，就是有個「 跑跑人 」的固力果大看板，是許多觀光客的打卡聖地，繁華的街道聚集多家藥妝店、百貨商店等，逛街逛累了可以直接前往與心齋橋以一條河道相隔的「 道頓堀」，浮誇的餐廳看板是道頓堀的特色，充滿著活力與熱情，感受不一樣的大阪府的風情。',
+      img: './img/007.jpg',
+      price: '10000',
+    },
+    {
+      id: '8',
+      name: '北海道',
+      describe: '北海道的景點非常豐富且四季分明，讓人每個季節都想造訪，北海道最重要的城市「 札幌」是必去景點之一，有種滿銀杏的北海道大學，秋天時整片金黃飄落；大通公園在夏天舉辦啤酒節、冬天盛大的札幌雪祭，會展出世界上最大的雪雕；還有熱鬧非常的「 狸小路商店街」是來北海道一定要血拼一波的地方。',
+      img: './img/008.jpg',
+      price: '12500',
+    },
+    {
+      id: '9',
+      name: '東京都',
+      describe: '來到日本怎麼能不到首都「 東京 」呢？東京必去景點像是「 晴空塔 」、「 淺草寺 」、「 雷門 」、「 東京鐵塔 」、「 六本木 」、「 澀谷」等，許多台灣遊客表示「東京好像永遠去不膩！」一定要拍照打卡的紅色巨大「雷門燈籠」，一旁就是香火鼎盛的淺草寺，許多遊客會特地跑來祈福，不過據說這裡的凶籤比例很高，反而也吸引大家前去試手氣，或是租一身浴衣體驗日本文化，非常有氛圍！',
+      img: './img/009.jpg',
+      price: '100000',
+    }
+  ]; // 商品清單
+  // ※紀錄你的點擊過的商品清單
+  let stepshopping = [];// 存放點擊過產品
+  // ※要把商品清單加上點擊事件
+  let btns = document.querySelectorAll('.addcart');
+  btns.forEach((item, index) => {
+    item.addEventListener('click', function () {
+      console.log('有點到', index);
+      stepshopping.push(index);
+
+      console.log(JSON.stringify(stepshopping), typeof (JSON.stringify(stepshopping)));
+      // ※點擊過的商品清單要帶到下一頁
+      // 陣列、物件，可以透過JSON格式把東西轉成字串
+      let JSON_stepshopping = JSON.stringify(stepshopping)
+
+      localStorage.setItem("stepshopping", JSON_stepshopping);
+      console.log(localStorage.getItem('stepshopping'));
+    });
+  });
+</script>
+<script>
+  // ＊商品清單
+  let shop = [
+    {
+      id: '1',
+      name: '山梨縣',
+      describe: '偉岸的富士山位在靜岡縣與山梨縣交界，山梨縣位在內陸，境內的高山、湖泊地景更加豐富，與靜岡縣風貌又不相同。人氣景點「 富士五湖」座落於富士山北面，其中的「 河口湖」最受歡迎，觀光景區最多，湖畔附近也有美術館、纜車等，春秋時節可以看到沿岸的櫻花或楓葉，鍾情湖光三色、愛好戶外活動的旅客，不妨走進山梨縣體驗看看！',
+      img: './img/001.jpg',
+      price: '10000',
+    },
+    {
+      id: '2',
+      name: '沖繩縣',
+      describe: '離台灣最近的日本城市沖繩縣，有著自然風光、海景、沙灘，宜人溫暖的氣候，讓人願意頻頻造訪。沖繩縣還保留豐富的琉球文化，首都「 那霸市」中有許多歷史遺跡，例如首里城、識名園。沖繩除了觀光、享受美景，也是人氣購物聖地，有 8 大購物中心、美國村，根本就是愛買族的天堂！',
+      img: './img/002.jpg',
+      price: '20000',
+    },
+    {
+      id: '3',
+      name: '千葉縣',
+      describe: '你知道「 東京迪士尼 」並不在東京嗎？日本必去景點「 東京迪士尼度假區」實際上在千葉縣！踏入後彷彿進入夢幻國度，不論大人還是小孩都能玩得十分盡興，鄰近東京都的千葉縣，除了迪士尼還有「 鴨川海洋世界 」、「 母親牧場」，與各類可愛動物親近、餵食，母親牧場一年四季都鮮花盛開，美景令人神往。',
+      img: './img/003.jpg',
+      price: '10000',
+    },
+    {
+      id: '4',
+      name: '愛知縣',
+      describe: '位在日本本州正中央的愛知縣，離東京、大阪、京都都很近，知名景點「 名古屋城 」是日本三大名城之一，屋簷上有閃亮亮的金鯱裝飾，又叫做「 金城」、「 金鯱城 」。名古屋市還有日本三大神社「 熱田神宮」，擁有許多信眾前去求好運、姻緣，這兩處古蹟景點都是去名古屋必去的景點，「園區很大好逛，熱衷日本史的朋友可能要花一整天才逛得完。歷史古蹟、整體園區都維護得很棒，最讓我感到讚嘆的是樹木花草都修剪地很整齊，卻不制式，是讓人舒服賞心悅目那種。」',
+      img: './img/004.jpg',
+      price: '5000',
+    },
+    {
+      id: '5',
+      name: '京都府',
+      describe: '有日本古都之稱的「 京都府」，吸引眾多來自國外各地的遊客，沉浸這個充滿古色古香的城鎮。世界遺產「清水寺」更是一定要造訪的景點之一，非常適合慢步、靜心觀賞寺院建築，拜訪完順道前往「 地主神社」，據說戀愛占卜非常靈驗！「 八坂神社 」也被京都人暱稱「 祇園 」，每到 7 月還會登場「 祇園祭 」，有超過千年的歷史，八坂神社周邊的人氣景點還有「 花見小路」，可以看見藝伎、舞技們穿梭街上，是京都非常獨特的人文風景。',
+      img: './img/005.jpg',
+      price: '30000',
+    },
+    {
+      id: '6',
+      name: '神奈川縣',
+      describe: '緊鄰東京都的神奈川縣，境內有日本鎌倉幕府古都，鎌倉筆直瑰麗的海岸線，成為關東地區夏季海邊度假首選，也是《灌籃高手》的經典場景，許多人會專門前往搭乘路上電車「 江之電 」，在「鎌倉高校前站 」下車，走到平交道一覽整片夢幻海灘。日本知名城市「 橫濱市 」、「 箱根町 」也位在神奈川縣，橫濱纜車、橫濱中華街、元町商店街、箱根神社，都是必逛景點。',
+      img: './img/006.jpg',
+      price: '15000',
+    },
+    {
+      id: '7',
+      name: '大阪府',
+      describe: '大阪府熱門景點「 大阪環球影城 」集合全球人氣電影主體，哈利波特、瑪利歐、侏羅紀公園、小小兵等，被不少人列為必去景點。大阪府知名景點「 心齋橋」，就是有個「 跑跑人 」的固力果大看板，是許多觀光客的打卡聖地，繁華的街道聚集多家藥妝店、百貨商店等，逛街逛累了可以直接前往與心齋橋以一條河道相隔的「 道頓堀」，浮誇的餐廳看板是道頓堀的特色，充滿著活力與熱情，感受不一樣的大阪府的風情。',
+      img: './img/007.jpg',
+      price: '10000',
+    },
+    {
+      id: '8',
+      name: '北海道',
+      describe: '北海道的景點非常豐富且四季分明，讓人每個季節都想造訪，北海道最重要的城市「 札幌」是必去景點之一，有種滿銀杏的北海道大學，秋天時整片金黃飄落；大通公園在夏天舉辦啤酒節、冬天盛大的札幌雪祭，會展出世界上最大的雪雕；還有熱鬧非常的「 狸小路商店街」是來北海道一定要血拼一波的地方。',
+      img: './img/008.jpg',
+      price: '12500',
+    },
+    {
+      id: '9',
+      name: '東京都',
+      describe: '來到日本怎麼能不到首都「 東京 」呢？東京必去景點像是「 晴空塔 」、「 淺草寺 」、「 雷門 」、「 東京鐵塔 」、「 六本木 」、「 澀谷」等，許多台灣遊客表示「東京好像永遠去不膩！」一定要拍照打卡的紅色巨大「雷門燈籠」，一旁就是香火鼎盛的淺草寺，許多遊客會特地跑來祈福，不過據說這裡的凶籤比例很高，反而也吸引大家前去試手氣，或是租一身浴衣體驗日本文化，非常有氛圍！',
+      img: './img/009.jpg',
+      price: '100000',
+    }
+  ]; // 商品清單
+  console.log(localStorage.getItem('stepshopping'));
+  // ＊從前一步驟取得到點擊的資料
+  let stepshopping = JSON.parse(localStorage.getItem('stepshopping'));
+  console.log(stepshopping);
+
+  // 過濾要顯示的產品(判斷索引值有沒有在點擊的陣列裡面)
+  // let result = [];
+  // shop.forEach((item, index) => {
+  //     if (stepshopping.includes(index)) {
+  //         result.push(item);
+  //     }
+  // });
+
+  // const result = shop.filter((item, index) => {
+  //     if (stepshopping.includes(index)) {
+  //         return item;
+  //     }
+  // });
+
+  const result = shop.filter((item, index) => stepshopping.includes(index));
+
+  // const result = shop.filter((item, index) => stepshopping.includes(index));
+  console.log(result);
+  // 把過濾完的資料顯示在畫面上
+  let cartlist = document.querySelector('#cartlist');
+  result.forEach((item) => {
+    console.log(item);
+    cartlist.innerHTML += `
+            <div class="col-12 d-flex justify-content-between align-items-center py-3 border-bottom">
+                <div>${item.name}</div>
+                <div>
+                    <button type="button" class="buckle-btn btn btn-light">-</button>
+                    <input type="number" min="1" value="1" class="quantity">
+                    <button type="button" class="subjoin-btn btn btn-light">+</button>
+                    <span class="showprice" data-price="${item.price}">$${item.price * 1}</span>
+                </div>
+            </div>
+            `;
+  });
+
+  // 先綁完單個按鈕的監聽事件，在換成多個
+  // let bucklebtn = document.querySelector('.buckle-btn');
+  // bucklebtn.addEventListener('click', function () {
+  //     // *取得到數量-1
+  //     let quantity = document.querySelector('.quantity');
+  //     quantity.value = quantity.value - 1;
+  //     let showprice = document.querySelector('.showprice');
+  //     // *金額更新在畫面上
+  //     // showprice.dataset.price (金額)
+  //     // quantity.value (數量)
+  //     showprice.innerHTML = `$ ${showprice.dataset.price * parseInt(quantity.value)}`;
+  // });
+  // let subjoinbtn = document.querySelector('.subjoin-btn');
+  // subjoinbtn.addEventListener('click', function () {
+  //     // *取得到數量-1
+  //     let quantity = document.querySelector('.quantity');
+  //     quantity.value = quantity.value + 1;
+  //     let showprice = document.querySelector('.showprice');
+  //     // *金額更新在畫面上
+  //     // showprice.dataset.price (金額)
+  //     // quantity.value (數量)
+  //     showprice.innerHTML = `$ ${showprice.dataset.price * parseInt(quantity.value)}`;
+  // });
+
+  cartlistbtn();
+  // 商品的數量和價格計算的按鈕綁定
+  function cartlistbtn() {
+    // 單個換成多個
+    let quantitys = document.querySelectorAll('.quantity');
+    let showprices = document.querySelectorAll('.showprice');
+
+    let bucklebtns = document.querySelectorAll('.buckle-btn');
+    bucklebtns.forEach((item, index) => {
+      item.addEventListener('click', function () {
+        // *取得到數量-1
+        let quantity = quantitys[index];
+        quantity.value = parseInt(quantity.value) - 1;
+        let showprice = showprices[index];
+        // *金額更新在畫面上
+        // showprice.dataset.price (金額)
+        // quantity.value (數量)
+        showprice.innerHTML = `$ ${showprice.dataset.price * parseInt(quantity.value)}`;
+        cartquantity(); //數量
+        cartcash(); //小計
+        carttotal();//總計
+        carttemporary();//更新暫存
+      });
+    });
+    let subjoinbtns = document.querySelectorAll('.subjoin-btn');
+    subjoinbtns.forEach((item, index) => {
+      item.addEventListener('click', function () {
+        // *取得到數量+1
+        let quantity = quantitys[index];
+        quantity.value = parseInt(quantity.value) + 1;
+        let showprice = showprices[index];
+        // *金額更新在畫面上
+        // showprice.dataset.price (金額)
+        // quantity.value (數量)
+        showprice.innerHTML = `$ ${showprice.dataset.price * parseInt(quantity.value)}`;
+        cartquantity(); //數量
+        cartcash(); //小計
+        carttotal();//總計
+        carttemporary();//更新暫存
+      });
+    });
+  }
+
+  cartquantity();
+  cartcash();
+  carttotal();
+  carttemporary();
+  // 計算所有數量
+  function cartquantity() {
+    let quantitys = document.querySelectorAll('.quantity');
+    let quantity = 0;
+    quantitys.forEach((item) => {
+      quantity = quantity + parseInt(item.value);
+    });
+    let showquantity = document.querySelector('#showquantity');
+    showquantity.innerHTML = quantity;
+  }
+  // 計算商品金額
+  function cartcash() {
+    let quantitys = document.querySelectorAll('.quantity');
+    let showprices = document.querySelectorAll('.showprice');
+    let cash = 0;
+    quantitys.forEach((item, index) => {
+      let showprice = showprices[index];
+      cash = cash + showprice.dataset.price * parseInt(item.value);
+      console.log(cash);
+    });
+    // 顯示在小計上面
+    let showcash = document.querySelector('#showcash');
+    showcash.innerHTML = `$${cash}`;
+  }
+  // 計算總計
+  function carttotal() {
+    let showtotal = document.querySelector('#showtotal');
+    let showcash = document.querySelector('#showcash');//小計
+    let showfreight = document.querySelector('#showfreight');//運費
+    console.log(showcash.textContent);
+    // 要把錢字號取代成沒有東西
+    let cash = showcash.textContent.replace('$', '');
+    let freight = showfreight.textContent.replace('$', '');
+    showtotal.innerHTML = `$${parseInt(cash) + parseInt(freight)}`;
+  }
+  // 暫存數量
+  function carttemporary() {
+    let quantity = [];
+    let quantitys = document.querySelectorAll('.quantity');
+    quantitys.forEach((item) => {
+      quantity.push(parseInt(item.value));
+    });
+    let JSON_shopquantity = JSON.stringify(quantity)
+
+    localStorage.setItem("shopquantity", JSON_shopquantity);
+  }
+
+  // 下一步的時候，把資料暫存起來
+  // let step02 = document.querySelector('#step02');
+  // step02.addEventListener('click', function () {
+  //     let quantity = [];
+  //     let quantitys = document.querySelectorAll('.quantity');
+  //     quantitys.forEach((item) => {
+  //         quantity.push(parseInt(item.value));
+  //     });
+  //     let JSON_shopquantity = JSON.stringify(quantity)
+
+  //     localStorage.setItem("shopquantity", JSON_shopquantity);
+  //     window.location = './step02.html';
+  //     console.log(localStorage.getItem('shopquantity'));
+  // });
+</script>
