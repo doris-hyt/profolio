@@ -6,6 +6,12 @@
 + 財政部臺北國稅局大同稽徵所   2020/11月 - 2023/12月<br>
   職位 : 稅務員
 
+## 電腦技能
++ Web開發：JavaScript 
++ Web框架：Vue.js
++ 前端切版：HTML / CSS / RWD / Bootstrap 
++ 前端美編：Figma /Photopea
+
 ## 關於我
 Welcome to my GitHub portfolio! Here are some of my featured works:
 
