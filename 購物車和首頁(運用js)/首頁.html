@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./css/首頁.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-danger ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./img/svg/BaskinRobbins31冰淇淋.png" alt="Bootstrap" width="40" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" aria-current="page" href="#">Blog</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <a class="nav-link" href="#">
+              <img src="./img/svg/svgexport-2.svg" width="30" height="24" alt="">
+            </a>
+          </li>
+          <li class="nav-item dropdown d-flex flex-column align-items-center">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-circle-user" style="font-size:30px"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">login</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/輪播圖片1.jpeg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/輪播圖片2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/輪播圖片3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+  <main class="container">
+    <div class="p-3">
+      <!-- 文字 -->
+      <div class="row pt-3 m-0">
+        <div class="col-12 d-flex flex-column align-items-center px-0">
+          <h2 class="text-center mb-0">Baskin-Robbins
+          </h2>
+          <p class="mb-0 fw-bold text-primary">31冰淇淋</br></p>
+          <p class="text-center">
+            以最多的冰淇淋口味著稱，相傳兩位創始人堅決相信來店裡享用冰淇淋的客人們應該要擁有選擇不同口味的機會，因此將隨時都有31種口味、一個月31天每天都可以選擇不同口味的冰淇淋，制訂為該品牌的政策。在
+          </p>
+          <div class="divider"></div>
+        </div>
+      </div>
+      <!-- 三格區塊 -->
+      <div class="row mb-5 pt-5 m-0">
+        <div class="p-4">
+          <div class="col-lg text-center mb-5 d-flex flex-column ">
+            <img src="./img/三格圖片-1.jpg" class="my-circle rounded-circle mx-auto mb-2 " alt="">
+            <h2 class="fw-normal">31種口味</h2>
+            <p class="flex-grow-1">希望讓顧客在一個月（31天）每天都能享用不同美味，配合季節隨時推出31種口味，此想法也是品牌名稱中最深刻的意含。
+            </p>
+            <a class="icon-link icon-link-hover link-underline link-underline-opacity-0 justify-content-center"
+              href="#">
+              Learn More
+              <i class="bi bi-arrow-right" d-flex align-items-center style="height:20px"></i>
+            </a>
+
+          </div>
+          <div class="col-lg text-center mb-5 d-flex flex-column ">
+            <img src="./img/三格圖片-2.jpg" class="my-circle rounded-circle mx-auto mb-2 " alt="">
+            <h2 class="fw-normal">標語</h2>
+            <p class="flex-grow-1">”We sell fun, not just ice cream"<br>
+              在全世界52個國家提供冰淇淋所能帶來的幸福感🥰
+            </p>
+            <a class="icon-link icon-link-hover link-underline link-underline-opacity-0 align-self-center " href="#">
+              Learn More
+              <i class="bi bi-arrow-right" d-flex align-items-center style="height:20px"></i>
+            </a>
+          </div>
+          <div class="col-lg text-center mb-5 d-flex flex-column ">
+            <img src="./img/三格圖片-3.jpg" class="my-circle rounded-circle mx-auto mb-2 " alt="">
+            <h2 class="fw-normal">遍布全球</h2>
+            <p class="flex-grow-1">
+              今日已成為全球最大的連鎖冰淇淋專賣店之一，開發的冰淇淋口味已超過一千種[2]，並在48個國家擁有6300家以上門市，其中有半數位於美國本土，日本則以590家以上的數量位居第二。
+            </p>
+            <a class="icon-link icon-link-hover link-underline link-underline-opacity-0 justify-content-center"
+              href="#">
+              Learn More
+              <i class="bi bi-arrow-right" d-flex align-items-center style="height:20px"></i>
+            </a>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary">button</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- 文字區 -->
+      <div class="row pt-3">
+        <div class="col-12 col-md-3">
+          <p>Master Cleanse Reliac Heirloom.</p>
+        </div>
+        <div class="col-12 col-md-9">
+          <p>Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.
+            Franzen you
+            probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+        </div>
+      </div>
+      <!-- 六張圖 -->
+      <div class="row">
+        <div class="row m-0">
+          <div class="col-6 p-2 p-md-3">
+            <div class="row">
+              <div class="col-6 p-1">
+                <img src="./img/六圖片-1.jpg" style="width:100%;aspect-ratio:500 / 300" alt="">
+              </div>
+              <div class="col-6 p-1 ">
+                <img src="./img/六圖片-1.jpg" style="width:100%;aspect-ratio:500 / 300" alt="">
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-12 p-1">
+                <img src="./img/六圖片-1.jpg" style="width:100%;aspect-ratio:600 / 360" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-6 p-2 p-md-3 ">
+            <div class="row">
+              <div class="col-12 p-1">
+                <img src="./img/六圖片-2.jpg" style="width:100%;aspect-ratio:600 / 360" alt="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 p-1">
+                <img src="./img/六圖片-2.jpg" style="width:100%;aspect-ratio:500 / 300" alt="">
+              </div>
+              <div class="col-6 p-1">
+                <img src="./img/六圖片-2.jpg" style="width:100%;aspect-ratio:500 / 300" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 表格 -->
+      <div class="row m-0  mb-5">
+        <div class="px-sm-3 px-0">
+          <table class="table ">
+            <thead>
+              <tr class="table-info">
+                <th scope="col">序號</th>
+                <th scope="col">球數</th>
+                <th scope="col">價格</th>
+                <th scope="col">換成脆皮甜筒</th>
+                <th scope="col">選擇</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>單球</td>
+                <td>110</td>
+                <td>130(+20)</td>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    </label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>雙球</td>
+                <td>140</td>
+                <td>160(+20)</td>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    </label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>三球</td>
+                <td>150</td>
+                <td>170(+20)</td>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                    </label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row m-0">
+            <div class="col-6 p-0">
+              <a class="icon-link icon-link-hover link-underline link-underline-opacity-0" href="#">
+                Learn More
+                <i class="bi bi-arrow-right" d-flex align-items-center style="height:20px"></i>
+              </a>
+            </div>
+            <div class="col-6 d-flex justify-content-end p-0">
+              <button type="button" class="btn btn-primary">button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 文字區 -->
+      <div class="row pt-3 mb-5">
+        <div class="col-12 col-md-5">
+          <p class="mb-2">Master Cleanse Reliac Heirloom.</p>
+          <div class="divider"></div>
+        </div>
+        <div class="col-12 col-md-7 mt-2 ">
+          <p>Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.
+            Franzen you
+            probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+        </div>
+      </div>
+      <!-- 卡片式區塊 -->
+      <div class="row mb-5 px-2 mx-0 ">
+        <!-- 在卡片外面包一層製造間隔 -->
+        <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+          <div class="card p-3" style="--bs-card-bg: #dae8eb;">
+            <img src="./img/卡片圖片1.jpg" class="card-img-top border border-Secondary" style="aspect-ratio:720 / 400"
+              alt="...">
+            <div class="card-body p-0 mt-4">
+              <p class="mb-1">subtitle</p>
+              <h5 class="card-title">烘焙茶布蕾</h5>
+              <p class="card-text flex-grow-1">芳醇香氣的烘焙茶與卡士達醬和焦糖締造口感的布蕾、令人不吃不可的組合！
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex">
+          <div class="card p-3 flex-grow-1" style="--bs-card-bg: #dae8eb;">
+            <img src="./img/卡片圖片2.jpg" class="card-img-top border border-Secondary w-100 bg-white"
+              style="object-fit: contain;aspect-ratio:720 / 400" alt="...">
+            <div class="card-body p-0 mt-4">
+              <p class="mb-1">subtitle</p>
+              <h5 class="card-title">Popping Shower </h5>
+              <p class="card-text flex-grow-1">跳跳糖在口中彈跳的口感與薄荷巧克力的搭配，是人氣第一的口味。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex">
+          <div class="card p-3" style="--bs-card-bg: #dae8eb;">
+            <img src="./img/卡片圖片2.jpeg" class="card-img-top border border-Secondary w-100 bg-white"
+              style="object-fit: contain;aspect-ratio:720 / 400" alt="...">
+            <div class="card-body p-0 mt-4">
+              <p class="mb-1">subtitle</p>
+              <h5 class="card-title">軟濃草莓巧克力 </h5>
+              <p class="card-text">草莓巧克力的王道組合!濃郁巧克力冰淇淋搭配香甜草莓的雙重風味，綴上巧克力堅果，每一口都是讓你驚豔的奢華好滋味。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex">
+          <div class="card p-3 flex-grow-1" style="--bs-card-bg: #dae8eb;">
+            <img src="./img/卡片圖片4.jpg" class="card-img-top border border-Secondary bg-white w-100"
+              style="object-fit: contain;aspect-ratio:720 / 400  " alt="...">
+            <div class="card-body p-0 mt-4">
+              <p class="mb-1">subtitle</p>
+              <h5 class="card-title">優格藍莓冰淇淋</h5>
+              <p class="card-text flex-grow-1">與《名偵探柯南》推出聯名口味冰淇淋，綿密香甜的冰淇淋在最裡幻化成喜愛角色滋味，除了暑氣全消還多了份幸福感受喔！
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- 圖+文字 -->
+      <div class="row mb-5 mx-0">
+        <div class="row mb-5 mx-0">
+          <div class="col-12 col-md-5 order-lg-2 d-flex justify-content-center align-items-center">
+            <img src="./img/三格圖片-1.jpg" class="rounded-circle w-50" style="object-fit: contain;aspect-ratio:1 / 1"
+              alt="">
+          </div>
+          <div class="col-12 col-md-7 order-lg-1">
+            <h2 class="my-title">產品介紹</h2>
+            <div class="lead">Baskin Robbins 31冰淇淋自1945年誕生於美國加州，如今是世界最大的連鎖冰淇淋專賣店，目前在52個國家擁有7800家以上的門市。
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5 mx-0">
+          <div class="col-12 col-md-7 order-2">
+            <h2 class="my-title">產品原料
+            </h2>
+            <div class="lead">嚴選來自日本國內外原料，並使用北海道牛乳為主原料，以高度技術及徹底的品質管理生產出高品質的冰淇淋。
+            </div>
+          </div>
+          <div class="col-12 col-md-5 order-1 d-flex justify-content-center align-items-center">
+            <img src="./img/三格圖片-2.jpg" class="rounded-circle w-50" style="object-fit: contain;aspect-ratio:1 / 1"
+              alt="">
+          </div>
+        </div>
+        <div class="row mb-5 mx-0">
+          <div class="col-12 col-md-5 order-lg-2 d-flex justify-content-center align-items-center">
+            <img src="./img/三格圖片-3.jpg" class="rounded-circle w-50" style="object-fit: contain;aspect-ratio:1 / 1"
+              alt="">
+          </div>
+          <div class="col-12 col-md-7 order-lg-1">
+            <h2 class="my-title">First featurette heading.It’ll blow
+              your mind.</h2>
+            <div class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose
+              here.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 評分介紹 -->
+      <div class="row mb-5">
+        <div class="col-12 col-md-6">
+          <img src="./img/hero-txt_240221.jpg" style="width:100% ;aspect-ratio:1 / 1" alt="">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-1">BRAND NAME</p>
+          <h4>31冰淇淋 CAKE</h4>
+          <div class="row m-0">
+            <ul class="star-rating p-0 pe-2 m-0" style="border-right:2px solid gray;width:auto">
+              <i class="bi bi-star-fill" style="color:yellow"></i>
+              <i class="bi bi-star-fill" style="color:yellow"></i>
+              <i class="bi bi-star-fill" style="color:yellow"></i>
+              <i class="bi bi-star-fill" style="color:yellow"></i>
+              <i class="bi bi-star"></i>
+              <i><span>4 Reviews</span></i>
+            </ul>
+            <ul class="list-unstyled d-flex justify-content-center m-0 ps-2 w-auto ">
+              <li class="me-2"><a class="link-body-emphasis" href="#"><i class="fa-brands fa-facebook-f"></i>
+                  <use xlink:href="#facebook" />
+                </a></li>
+              <li class="me-2"><a class="link-body-emphasis" href="#"><i class="fa-brands fa-instagram"></i>
+                  <use xlink:href="#instagram" />
+                </a></li>
+              <li class="me-2"><a class="link-body-emphasis" href="#"><i class="fa-brands fa-twitter"></i>
+                  <use xlink:href="#twitter" />
+                </a></li>
+            </ul>
+          </div>
+          <p class="mb-3">
+            31冰淇淋向來以最多的冰淇淋口味著稱，相傳兩位創始人堅決相信來店裡享用冰淇淋的客人們應該要擁有選擇不同口味的機會，因此將隨時都有31種口味、一個月31天每天都可以選擇不同口味的冰淇淋，制訂為該品牌的政策。</p>
+          <div class="row mb-3">
+            <div class="col-5 ">
+              <span>Color</span>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button " class="btn btn-chocolate rounded-circle me-2 "
+                  style="--bs-btn-padding-x:.75rem;--bs-btn-padding-y:.75rem"></button>
+                <button type="button" class="btn btn-strawberry rounded-circle me-2 "
+                  style="--bs-btn-padding-x:.75rem;--bs-btn-padding-y:.75rem"></button>
+                <button type="button" class="btn btn-success rounded-circle me-2 "
+                  style="--bs-btn-padding-x:.75rem;--bs-btn-padding-y:.75rem"></button>
+              </div>
+            </div>
+            <div class="col-7 d-flex">
+              <span class="me-1">Size</span>
+              <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  白色的
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">白色的</a></li>
+                  <li><a class="dropdown-item" href="#">淺藍色的</a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-6 ">$1,050</div>
+            <div class="col-6 d-flex justify-content-end ">
+              <button class="btn btn-primary" type="submit">Button</button>
+              <button type="button" class="btn btn-light rounded-circle ms-2"
+                style="--bs-btn-padding-x:.75rem;--bs-btn-padding-y:.75rem">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="bi bi-heart-fill"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <!-- 8張卡片 -->
+      <div class="row mb-5 mx-0 card-content">
+        <div class="row m-0 ">
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img
+                src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/89ec0b80-1fae-42cc-b8f8-85a8a6533648.png"
+                class="card-img-top border border-Secondary card-content-img"
+                style="aspect-ratio:720 / 400 ;object-fit: contain" alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">薄荷巧克力</h5>
+                <p class="card-text flex-grow-1 me-3">清爽的薄荷與融於口中的巧克力，搭配出絕妙的美味。
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">60</span><span>/標準單球1球</span></p>
+                <button type="button" class="btn btn-primary" data-id="0"style="width:70px">購買</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img
+                src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/59069e79-616e-479f-93e3-52fec67ee53c.png"
+                class="card-img-top border border-Secondary card-content-img" style="object-fit: contain;aspect-ratio:720 / 400"
+                alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">Jamoca杏仁富滋</h5>
+                <p class="card-text flex-grow-1 me-3">雙豆混和的濾布式手沖咖啡冰淇淋上，杏仁與巧克力的絕妙搭配。
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">70</span><span>/標準單球1球</span></p>
+                <button type="button" class="btn btn-primary"data-id="1" style="width:70px">購買</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img
+                src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/58ab01ba-b411-496d-a88c-085e43dd1174.png"
+                class="card-img-top border border-Secondary card-content-img" style="aspect-ratio:720 / 400 ;object-fit: contain"
+                alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">戀愛秘方31</h5>
+                <p class="card-text flex-grow-1 me-3">覆盆子
+                  ➕白巧克力的酸甜冰淇淋🍨
+                  裡面還有一顆顆💞
+                  愛心形狀的覆盆子巧克力🍫❗️
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">110</span><span>/標準單球1球</span></p>
+                <button type="button" class="btn btn-primary"data-id="2" style="width:70px">購買</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img
+                src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/d91b2021-22bd-4061-893f-68634929f204.png"
+                class="card-img-top border border-Secondary card-content-img" style="aspect-ratio:720 / 400 ;object-fit: contain"
+                alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">莓果成雙起司蛋糕</h5>
+                <p class="card-text flex-grow-1 me-3">以草莓🍓、藍莓🫐雙彩點綴同時品嘗酸中帶甜的兩種莓果風味再添道地起司🧀蛋糕塊
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">60</span><span>/標準單球1球</span></p>
+                <button type="button" class="btn btn-primary" data-id="3" style="width:70px">購買</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row m-0 ">
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img
+                src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/fe92684d-56f5-45ed-ae0b-efa91f8e8cec.png"
+                class="card-img-top border border-Secondary card-content-img" style="aspect-ratio:720 / 400 ;object-fit: contain"
+                alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">虹彩雪酪</h5>
+                <p class="card-text flex-grow-1 me-3">由鳳梨、橘子與蔓越莓組合而成的「彩虹雪酪」口味，完美融合了三種口味的特色和滋味，甜中帶酸的清爽口感非常解膩
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">90</span><span>/標準單球1球</span></p>
+                <button type="button" class="btn btn-primary"data-id="4" style="width:70px">購買</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/1360318.jpg"
+                class="card-img-top border border-Secondary card-content-img" style="object-fit: contain;aspect-ratio:720 / 400"
+                alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">焦糖彩帶</h5>
+                <p class="card-text flex-grow-1 me-3">以香濃之焦糖彩帶裝扮您熟悉的香草冰淇淋，醉人之甜味雙重奏。
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">100</span><span>/標準單球1球</span></p>
+                <button type="button" data-id="5"class="btn btn-primary" style="width:70px">購買</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img
+                src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/66801c8f-03a0-46f9-8a4e-e66aa4696dba.png"
+                class="card-img-top border border-Secondary card-content-img" style="aspect-ratio:720 / 400 ;object-fit: contain"
+                alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">諾基大道</h5>
+                <p class="card-text flex-grow-1 me-3">巧克力冰淇淋搭配杏仁、棉花軟糖，名稱也別出心裁。
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">65</span><span>/標準單球1球</span></p>
+                <button type="submit" class="btn btn-primary" data-id="6" style="width:70px">購買<a href="./購物車訂購畫面.html"></a></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 px-3 mb-2 flex-grow-1 d-flex ">
+            <div class="card p-3 flex-grow-1" style="--bs-card-border-width:0px ">
+              <img
+                src="https://foodtracer.health.ntpc.gov.tw/WebUPD/foodtracer/FoodCompany/5c7a0f9d-d437-4f88-8b06-541f692c8009.png"
+                class="card-img-top border border-Secondary card-content-img" style="aspect-ratio:720 / 400 ;object-fit: contain"
+                alt="...">
+              <div class="card-body p-0 mt-4 d-flex flex-column">
+                <p class="mb-1">CATEGORY</p>
+                <h5 class="card-title card-content-name">十足草莓</h5>
+                <p class="card-text flex-grow-1 me-3">復函香甜之特選草莓
+                </p>
+                <p class="mb-4 "><span>$</span><span class="card-content-price">75</span><span>/標準單球1球</span></p>
+                <button type="button" class="btn btn-primary"data-id="7" style="width:70px">購買</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 地圖+文字 -->
+    <div class="row position-relative">
+      <div class="col-12 ">
+        <div class="w-100  ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d116513.04461986477!2d120.60978053120486!3d24.13549168928586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x34693df8c4d767b1%3A0xa2df0bd9bfc89e08!2zNDAx5Y-w5Lit5biC5p2x5Y2A6YCy5b636LevNzAw6Jmf!3m2!1d24.1355138!2d120.6921821!5e0!3m2!1szh-TW!2stw!4v1718253397121!5m2!1szh-TW!2stw"
+            height="900" style="border:0;" allowfullscreen="" loading="lazy" class="w-100 "
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="map-form position-absolute top-50  bg-light  p-3">
+          <h4>Feedback</h4>
+          <p>Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Button</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="container-fluid p-0">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #c92974">
+      <!-- Grid container -->
+      <div class="container-fluid pt-4 pb-0 px-0">
+        <!-- Section: Links -->
+        <section class="p-4">
+          <!--Grid row-->
+          <div class="row ">
+            <!-- Grid column -->
+            <div class="col  col-md-4 mx-auto mt-3 d-flex justify-content-center">
+              <a href="#">
+                <img src="./img/svg/BaskinRobbins31冰淇淋.png" alt="Bootstrap" width="250" height="250">
+              </a>
+
+            </div>
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+            <!-- Grid column -->
+            <div class="col-12 col-md-2 mx-auto mt-3 d-flex justify-content-center">
+              <ul class="d-flex flex-column p-0 list-unstyled">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Section</h6>
+                <li class="mb-3 ">
+                  <a href="" class="text-white nav-link">Home</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Features</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Pricing</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">FAQs</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-12 col-md-2 mx-auto mt-3 d-flex justify-content-center">
+              <ul class="d-flex flex-column p-0 list-unstyled">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Section</h6>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Home</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Features</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Pricing</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">FAQs</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-12 col-md-2 mx-auto mt-3 d-flex justify-content-center">
+              <ul class="d-flex flex-column p-0 list-unstyled">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Section</h6>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Home</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Features</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Pricing</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">FAQs</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-12 col-md-2 mx-auto mt-3 d-flex justify-content-center">
+              <ul class="d-flex flex-column p-0 list-unstyled">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Section</h6>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Home</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Features</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">Pricing</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">FAQs</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+        <!-- Section: Copyright -->
+        <section class=" container-fluid  p-sm-0 pt-0 px-3" style="background-color:#811023">
+          <div class="row d-flex align-items-center m-0">
+            <!-- Grid column -->
+            <div class="col-12 col-sm-8 text-center text-md-start">
+              <!-- Copyright -->
+              <div class="p-3">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+              </div>
+              <!-- Copyright -->
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-12 col-sm-4 ml-lg-0 text-center ps-0 social-media ">
+              <ul class="list-unstyled d-flex ">
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="fa-brands fa-facebook-f"
+                      aria-hidden="true"></i>
+                    <use xlink:href="#facebook">
+                    </use>
+                  </a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-twitter"></i>
+                    <use xlink:href="#twitter">
+                    </use>
+                  </a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="fa-brands fa-instagram"
+                      aria-hidden="true"></i>
+                    <use xlink:href="#instagram">
+                    </use>
+                  </a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="fa-brands fa-linkedin-in"
+                      aria-hidden="true"></i>
+                    <use xlink:href="#linkedin">
+                    </use>
+                  </a></li>
+              </ul>
+            </div>
+            <!-- Grid column -->
+          </div>
+        </section>
+        <!-- Section: Copyright -->
+      </div>
+      <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/64f90ccd80.js" crossorigin="anonymous"></script>
+  <script src="./js/首頁 copy.js"></script>
+</body>
+
+</html>
