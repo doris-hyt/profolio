@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    .label-style {
+      background-size: cover;
+      display: block;
+      width: 80px;
+      height: 80px
+    }
+
+    .scissor {
+      background-image: url(./img/scissor.jpg);
+    }
+
+    .stone {
+      background-image: url(./img/stone.jpg);
+    }
+
+    .paper {
+      background-image: url(./img/paper.jpg);
+
+    }
+
+    .scissor01 {
+      bottom: 65px;
+
+    }
+
+    .stone01 {
+      top: 25px;
+      z-index: 1;
+    }
+
+    .paper01 {
+      bottom: 65px;
+
+    }
+    .glow{
+      box-shadow: 0px 0px 6px 12px #f4c22c
+    }
+
+    /* .user {
+      display: flex;
+      justify-content: space-around;
+    } */
+
+
+    .bi {
+      transform: rotate(135deg);
+      width:auto;
+      padding:0;
+      font-size:36px;
+      left:33%;
+      top:35%;
+      z-index: 1;
+      color:rgb(97, 85, 15)
+    }
+
+    .container01 {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: gray;
+      border: 1rpx solid black;
+      overflow: hidden;
+      position: relative;
+      margin: auto
+    }
+
+    .container01>.part {
+      width: 58%;
+      height: 58%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 0% 0%;
+    }
+
+    .pos-1 {
+      transform: rotate(329deg) skewX(-30deg);
+
+    }
+
+    .pos-2 {
+      transform: rotate(89deg) skewX(-30deg);
+    }
+
+    .pos-3 {
+      transform: rotate(209deg) skewX(-30deg);
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="user mb-3 pt-2">
+    <div class="row">
+      <div class="row text-center text-warning">
+        <h4>玩家請點擊下面三個按鈕</h4>
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <input type="checkbox" value="scissor" hidden>
+          <label for="scissor" class="label-style scissor"></label>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <input type="checkbox" value="stone" hidden>
+          <label for="scissor" class="label-style stone"></label>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <input type="checkbox" value="paper" hidden>
+          <label for="scissor" class="label-style paper"></label>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
+  <section class="computer bg-primary pt-3 px-4" style="height:350px;width:550px;margin:auto">
+    <div class="bg-white" style="height:250px">
+      <div class="row position-relative text-primary">
+        <h4>電腦選擇的是:</h4>
+        <i class="bi bi-hand-index-fill position-absolute"></i>
+      </div>
+      <div class="row p-0" style="width:200px;height:200px;margin:0px auto -150px">
+        <div class="col-12 bg-primary p-0 position-relative" style="width:200px">
+          <img src="./img/stone01.jpg" width="40" height="40" class="position-absolute start-50 stone01 translate-middle-x"
+            alt="">
+        </div>
+        <div class="col-12 container01 p-0
+                switch">
+          <div class="part part-1 pos-1 glow" style="background-color:#E81826">
+          </div>
+          <div class="part part-2 pos-2" style="background-color:#ABCA31"></div>
+          <div class="part part-3 pos-3" style="background-color:#00A39B"></div>
+        </div>
+        <div class="row bg-primary p-0 m-0">
+          <div class="col-6 bg-danger p-0 position-relative">
+            <img src="./img/scissor01.jpg" width="40" height="40"
+              class="position-absolute start-50  scissor01 translate-middle-x" alt="">
+          </div>
+          <div class="col-6 bg-warning p-0 position-relative">
+            <img src="./img/paper01.jpg" width="40" height="40" class="position-absolute start-50  paper01 translate-middle-x"
+              alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row mt-4 mx-0 gx-5 ">
+      <div class="col">
+        <div class="bg-warning rounded-pill text-center user-win">玩家贏</div>
+      </div>
+      <div class="col">
+        <div class="bg-warning rounded-pill text-center com-win">電腦贏</div>
+      </div>
+      <div class="col ">
+        <div class="bg-warning rounded-pill text-center tie">平手</div>
+      </div>
+    </div>
+
+    
+  </section>
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="./js/猜拳.js"></script>
+
+
+
+</body>
+
+</html>

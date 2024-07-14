@@ -1,0 +1,88 @@
+  .label-style {
+    background-size: cover;
+    display: block;
+    width: 80px;
+    height: 80px
+  }
+
+  .scissor {
+    background-image: url(../img/scissor.jpg);
+  }
+
+  .stone {
+    background-image: url(../img/stone.jpg);
+  }
+
+  .paper {
+    background-image: url(../img/paper.jpg);
+
+  }
+
+  .scissor01 {
+    bottom: 65px;
+
+  }
+
+  .stone01 {
+    top: 25px;
+    z-index: 1;
+  }
+
+  .paper01 {
+    bottom: 65px;
+
+  }
+
+  .glow {
+    box-shadow: 0px 0px 6px 12px #f4c22c
+  }
+
+  /* .user {
+      display: flex;
+      justify-content: space-around;
+    } */
+
+
+  .bi {
+    transform: rotate(135deg);
+    width: auto;
+    padding: 0;
+    font-size: 36px;
+    left: 33%;
+    top: 35%;
+    z-index: 1;
+    color: rgb(97, 85, 15)
+  }
+
+  .container01 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: gray;
+    border: 1rpx solid black;
+    overflow: hidden;
+    position: relative;
+    margin: auto
+  }
+
+  .container01>.part {
+    width: 58%;
+    height: 58%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+  }
+
+  .pos-1 {
+    transform: rotate(329deg) skewX(-30deg);
+
+  }
+
+  .pos-2 {
+    transform: rotate(89deg) skewX(-30deg);
+  }
+
+  .pos-3 {
+    transform: rotate(209deg) skewX(-30deg);
+  }
