@@ -1,4 +1,3 @@
-
 # My Portfolio
 
 Welcome to my GitHub portfolio! Here are some of my featured works:
