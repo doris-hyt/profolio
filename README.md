@@ -22,3 +22,6 @@
 
 - [猜拳遊戲](https://doris-hyt.github.io/profolio/games/game.html)
   ![Project 1 Screenshot](img/遊戲封面.png)
+
+ - [gasp練習](https://doris-hyt.github.io/profolio/gasp/gasp01.html)
+  ![Project 1 Screenshot](img/pic03.png)
