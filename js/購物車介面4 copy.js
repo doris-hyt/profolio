@@ -55,7 +55,7 @@ function displayorder() {
                 <div class="col col-sm-8 d-flex align-items-center justify-content-center px-0 ">
                   <span class="menu-item-text">x${item.quantity}</span>
                 </div>
-                <div class="col col-sm-4 text-center menu-item-text p-0 ">$${item.price}</div>
+                <div class="col col-sm-4 text-center menu-item-text p-0 ">$${item.total}</div>
               </div>
             </div>
           </div>
