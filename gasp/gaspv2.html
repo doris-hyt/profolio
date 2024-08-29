@@ -148,11 +148,7 @@
       position: absolute;
       left:0px;
       top:0px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top;
-      background-attachment: fixed;
-      background-image: url(./img/20231116_142745_b1cac14b_w1920.jpg);
+      object-fit: cover;
       filter: blur(4px);
     }
 
@@ -189,7 +185,6 @@
 
 <body>
   <div class="nav">
-    <img src="./img/scissor01.jpg" width="0" height="0" alt="">
     <div class="logo">
     </div>
     <a href="#bg-1" class="nav-btn-all nav-btn">JAPAN</a>
@@ -199,7 +194,9 @@
   </div>
   <div class="container">
     <div class="bg" id="bg-1">
-      <div class="mask01"></div>
+      <div class="mask01">
+        <img src="./img/20231116_142745_b1cac14b_w1920.jpg" class="mask01" alt="">
+      </div>
       <div id="banner-1" class="banner">
         <div class="mask">
           <div class="btn">JAPAN</div>
