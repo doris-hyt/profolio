@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .card-container {
+      height: 350px;
+    }
+
+    #js_iBike_station_arr01,
+    #js_iBike_keyword_arr,
+    #js_iBike_location_arr {
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .btn-outline-primary {
+      --bs-btn-border-color: #0e2e5d
+    }
+
+
+    .btn-group>.btn {
+      --bs-border-radius: 0px
+    }
+
+    .status {
+      display: inline-block;
+    }
+
+    .js_ul_style {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      max-height: 500px;
+      flex-wrap: wrap;
+      padding:0px
+    }
+
+    .js_ul_style li {
+      margin-left: 20px
+    }
+
+    .text-muted {
+      font-style: italic;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section class="container">
+    <div class="d-flex justify-content-center align-items-center pt-4">
+      <div class="card-columns">
+        <div class="card mb-2">
+          <img class="card-img-top" src="./img/taichung ibike.jpg" alt="ibikeImgOne">
+          <div class="card-body">
+            <h5 class="card-title">車站總計</h5>
+            <p class="card-text">目前臺中市的 ibike 共有<span class="px-2" id="js_iBike_station_total"></span>處車站</p>
+          </div>
+          <div class="card-footer"><small class="text-muted">資料來源<a class="pl-1"
+                href="https://opendata.taichung.gov.tw/search/6e38eb56-0e9a-4b9e-806d-23cd35d44d6b">台中政府資料開放平臺</a></small>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">車站停靠點</h5>
+            <p class="card-text mb-0">目前所有車站為下列：</p>
+            <div class="btn-group flex-wrap" role="group" aria-label="Basic outlined example ">
+              <button type="button" class="btn02 btn btn-outline-primary">東區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">中區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">西區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">南區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">北區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">西屯區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">南屯區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">北屯區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">豐原區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">大里區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">太平區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">清水區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">沙鹿區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">大甲區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">東勢區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">梧棲區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">烏日區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">神岡區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">大肚區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">大雅區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">后里區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">霧峰區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">潭子區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">龍井區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">外埔區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">和平區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">石岡區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">大安區</button>
+              <button type="button" class="btn02 btn btn-outline-primary">新社區</button>
+            </div>
+            <div class="card-text card-container mt-3">
+              <div id="js_iBike_station_arr01">
+                <ul id="js_iBike_station_arr" class="js_ul_style"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer"><small class="text-muted">資料來源<a class="pl-1"
+                href="https://opendata.taichung.gov.tw/search/6e38eb56-0e9a-4b9e-806d-23cd35d44d6b">台中政府資料開放平臺</a></small>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">依定位點找尋車站</h5>
+            <p class="card-text mb-2">在附近的車站：<button class="btn01 btn btn-primary">開啟定位</button></p>
+            <div class="card-text card-container mt-3">
+              <div id="js_iBike_location_arr"></div>
+            </div>
+          </div>
+          <div class="card-footer"><small class="text-muted">資料來源<a class="pl-1"
+                href="https://opendata.taichung.gov.tw/search/6e38eb56-0e9a-4b9e-806d-23cd35d44d6b">台中政府資料開放平臺</a></small>
+          </div>
+        </div>
+        <div class="card mb-2">
+          <div class="card-body">
+            <h5 class="card-title">自己動手搜</h5>
+            <p class="card-text mb-0">找你心儀的車站：</p>
+            <input class="form-control mb-2" onkeyup="filterStationHandler(this)" placeholder="請輸入地點或地址">
+            <div class="card-text card-container mt-3">
+              <div id="js_iBike_keyword_arr"></div>
+            </div>
+          </div>
+          <div class="card-footer"><small class="text-muted">資料來源<a class="pl-1"
+                href="https://opendata.taichung.gov.tw/search/6e38eb56-0e9a-4b9e-806d-23cd35d44d6b">台中政府資料開放平臺</a></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Detail modal-->
+  <div class="modal fade" id="Ubike-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title status" id="Ubike-modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="movie-body-title">
+          <!--製作跳出視窗html架構-->
+          <div class='row' id="js_station_detail">
+            <p><em id="Ubike-modal-date"></em></p>
+            <p id="Ubike-modal-description"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.js"
+    integrity="sha512-luUnkeG+uabiT2pZdi5ME5uADvq+FpDs2fK5V0nVXrHCND9F077fKaE9W//oJvGnWSmwQmCau63A6s3um1NZmg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="./js/Ubike.js"></script>
+
+
+</body>
+
+</html>
