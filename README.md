@@ -26,6 +26,6 @@
 - [gasp練習](https://doris-hyt.github.io/profolio/gasp/gaspv2.html)
   ![Project 1 Screenshot](img/pic03.png)
   
-- [gasp練習](https://doris-hyt.github.io/profolio/Ubike/Ubike.html)
-  ![Project 1 Screenshot](Ubike/img/taichung ibike.jpg)
+- [api練習](https://doris-hyt.github.io/profolio/Ubike/Ubike.html)
+  ![Project 1 Screenshot](Ubike/img/taichungibike.jpg)
   
